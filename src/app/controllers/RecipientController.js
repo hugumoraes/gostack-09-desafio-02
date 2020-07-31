@@ -41,6 +41,29 @@ class RecipientController {
 
     return res.json(recipient);
   }
+
+  async update(req, res) {
+    const schema = Yup.object().shape({
+      name: Yup.string(),
+      address_street: Yup.string(),
+      address_number: Yup.string(),
+      address_complement: Yup.string(),
+      address_state: Yup.string(),
+      address_city: Yup.string(),
+      address_cep: Yup.string(),
+    });
+
+    if (!(await schema.isValid(req.body)))
+      return res.status(400).json({ error: 'Validation failed' });
+
+    const { name } = req.body;
+
+    const recipient = await Recipient.findOne({ where: { name } });
+
+    const updatedRecipient = await recipient.update(req.body);
+
+    return res.json(updatedRecipient);
+  }
 }
 
 export default new RecipientController();
