@@ -3,11 +3,7 @@
 </h1>
 
 <h3 align="center">
-  Challenge 2
-</h3>
-
-<h3 align="center">
-  FastFeet, the beginning
+  Challenge 2: FastFeet
 </h3>
 
 <h3 align="center">
