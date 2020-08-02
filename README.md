@@ -3,7 +3,11 @@
 </h1>
 
 <h3 align="center">
-  Challenge 2: FastFeet, the beginning
+  Challenge 2
+</h3>
+
+<h3 align="center">
+  FastFeet, the beginning
 </h3>
 
 <h3 align="center">
@@ -24,27 +28,25 @@
   </a>
 </p>
 
-## :rocket: Sobre o desafio
+## :rocket: About the challenge
 
-A aplicação que iremos dar início ao desenvolvimento a partir de agora é um app para uma transportadora fictícia, o FastFeet.
+From now on we will be building an application for a fictional shipping company, the FastFeet
 
-Nesse primeiro desafio vamos criar algumas funcionalidades básicas que aprendemos ao longo das aulas até aqui. Esse projeto será desenvolvido aos poucos até o fim da sua jornada onde você terá uma aplicação completa envolvendo back-end, front-end e mobile, que será utilizada para a **certificação do bootcamp**, então, bora pro código!
+### **Tools insight**
 
-### **Um pouco sobre as ferramentas**
-
-Você deverá criar a aplicação do zero utilizando o [Express](https://expressjs.com/), além de precisar configurar as seguintes ferramentas:
+You should create the application from scratch utilizing [Express](https://expressjs.com/) and configure all those tools:
 
 - Sucrase + Nodemon;
 - ESLint + Prettier + EditorConfig;
-- Sequelize (Utilize PostgreSQL ou MySQL);
+- Sequelize (PostgreSQL or MySQL);
 
-### **Funcionalidades**
+### **Functionalities**
 
-Abaixo estão descritas as funcionalidades que você deve adicionar em sua aplicação.
+Below are described all functionalities you should implement in your application
 
-### **1. Autenticação**
+### **1. Authentication**
 
-Permita que um usuário se autentique em sua aplicação utilizando e-mail e uma senha.
+Allow a user to authenticate in your application using an e-mail and a password.
 
 Crie um usuário administrador utilizando a funcionalidade de [seeds do sequelize](https://sequelize.org/master/manual/migrations.html#creating-the-first-seed), essa funcionalidade serve para criarmos registros na base de dados de forma automatizada.
 
