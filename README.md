@@ -44,13 +44,14 @@ Below are described all functionalities you should implement in your application
 
 Allow a user to authenticate in your application using an e-mail and a password.
 
-Crie um usuário administrador utilizando a funcionalidade de [seeds do sequelize](https://sequelize.org/master/manual/migrations.html#creating-the-first-seed), essa funcionalidade serve para criarmos registros na base de dados de forma automatizada.
+Create an admin user utilizing [sequelize seeds](https://sequelize.org/master/manual/migrations.html#creating-the-first-seed), this functionality is used to create
+database registries automatically
 
-Para criar um seed utilize o comando:
+To create a new seed use:
 
     yarn sequelize seed:generate --name admin-user
 
-No arquivo gerado na pasta `src/database/seeds` adicione o código referente à criação de um usuário administrador:
+Add the following code inside the new file `src/database/seeds` to create a new admin user:
 
     const bcrypt = require("bcryptjs");
 
@@ -74,24 +75,25 @@ No arquivo gerado na pasta `src/database/seeds` adicione o código referente à 
       down: () => {}
     };
 
-Agora execute:
+Then run:
 
     yarn sequelize db:seed:all
 
-Agora você tem um usuário na sua base de dados, utilize esse usuário para todos os logins que você fizer.
+Now you have a new user inside your database, utilize this user to all logins you do inside the application.
 
-- A autenticação deve ser feita utilizando JWT.
-- Realize a validação dos dados de entrada;
+- Authentication must be done utilizing JWT.
+- Validate all input data
 
-### 2. Gestão de destinatários
+### 2. Recipient management
 
-Você agora precisa permitir que destinatários sejam mantidos (cadastrados/atualizados) na aplicação, e esses devem ter o **nome** do destinatário e campos de endereço: **rua**, **número**, **complemento**, **estado**, **cidade** e **CEP**.
+After that, you need to allow recipients to be stored (registered/updated) inside the application, they have a recipient **name** and the address fields:
+**street**, **number**, **complement**, **state**, **city** and **zip-code**.
 
-Utilize uma nova tabela no banco de dados chamada `recipients` para guardar informações do destinatário.
+Use a new table in the database called `recipients` to store recipient data.
 
-O cadastro de destinatários só pode ser feito por administradores autenticados na aplicação.
+Recipients registering only can be done by authenticated administrators in the app.
 
-O destinatário não pode se autenticar no sistema, ou seja, não possui senha.
+The recipient can not authenticated itself in the system, it has no password.
 
 ---
 
